@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import lwsf45 as lw
 import serial
 import numpy as np
@@ -11,7 +12,7 @@ print('Running SF45/B LWNX Test.')
 
 print("Starting...")
 
-serial_port_name = 'COM3'
+serial_port_name = '/dev/ttyACM0'
 serial_port_baudrate = 921600
 sensor_port = serial.Serial(serial_port_name, serial_port_baudrate, timeout = 0.1)
 lw.set_update_rate(sensor_port, 1)
